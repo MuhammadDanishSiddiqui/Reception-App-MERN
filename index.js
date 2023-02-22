@@ -11,12 +11,12 @@ app.use(cors());
 app.use(express.json());
 app.use("/api", visitorsRouter);
 
-const staticPath = path.join(__dirname, "../client/build");
+const staticPath = path.join(__dirname, "./client/build");
 
 if (process.env.NODE_ENV == "production") {
   app.use(express.static(staticPath));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "./client", "build", "index.html"));
   });
 }
 
