@@ -4,7 +4,7 @@ import Routes from "./config/routes";
 import Header from "./components/header";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "https://reception-app-mern.vercel.app";
 
 function App() {
   return (
