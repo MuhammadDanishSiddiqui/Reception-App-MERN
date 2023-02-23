@@ -4,11 +4,11 @@ const router = new express.Router();
 
 router.post("/visitors", (req, res) => {
   const data = loadData();
-  data.push(req.body);
+  data.push({ ...req.body });
   saveData(data);
   res.status(201).send({
     success: true,
-    data: req.body,
+    data: { ...req.body },
     error: "",
     message: "Created Successfully!",
   });
