@@ -70,7 +70,7 @@ const Visitors = () => {
                 <td className="px-6 py-4">{visitor.purpose}</td>
                 <td className="px-6 py-4">{visitor.personToMeet}</td>
                 <td className="px-6 py-4">
-                  {moment(visitor.dataTime).format("lll")}
+                  {moment(visitor.dateTime).format("lll")}
                 </td>
                 <td className="px-6 py-4">
                   <Link
